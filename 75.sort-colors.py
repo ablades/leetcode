@@ -48,12 +48,22 @@ class Solution(object):
         :type nums: List[int]
         :rtype: None Do not return anything, modify nums in-place instead.
         """
+        left = 0
+        right = len(nums) - 1
+        mid = 0
+        while mid < right:
+            # left swap
+            if nums[mid] == 0:
+                nums[left], nums[mid] = nums[mid], nums[left]
+                left += 1
 
-        # low, mid, high
-        # low and high only move when values are 0 or 2 respectively
+            # right swap
+            if nums[mid] == 2:
+                nums[right], nums[mid] = nums[mid], nums[right]
+                right -= 1
 
-        for _, num in enumerate(nums):
+            mid += 1
 
 
-        
+
 # @lc code=end
