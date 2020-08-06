@@ -51,19 +51,16 @@ class Solution(object):
         left = 0
         right = len(nums) - 1
         mid = 0
-        while mid < right:
+
+        while mid <= right:
             # left swap
             if nums[mid] == 0:
                 nums[left], nums[mid] = nums[mid], nums[left]
                 left += 1
-
+                mid += 1
             # right swap
-            if nums[mid] == 2:
+            elif nums[mid] == 2:
                 nums[right], nums[mid] = nums[mid], nums[right]
                 right -= 1
-
-            mid += 1
-
-
-
-# @lc code=end
+            else:
+                mid += 1
