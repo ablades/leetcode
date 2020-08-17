@@ -48,19 +48,22 @@ class Solution(object):
         :type nums: List[int]
         :rtype: None Do not return anything, modify nums in-place instead.
         """
+        # keep three pointers
+        # loop until mid meets right
+        # swap if mid is a 0 or 2 swap it with left or right respectively. advance pointer
         left = 0
         right = len(nums) - 1
         mid = 0
-
         while mid <= right:
-            # left swap
+            # swap mid with left
             if nums[mid] == 0:
                 nums[left], nums[mid] = nums[mid], nums[left]
                 left += 1
                 mid += 1
-            # right swap
+            # swap mid with right
             elif nums[mid] == 2:
                 nums[right], nums[mid] = nums[mid], nums[right]
                 right -= 1
+            # value is not a 2 or 0, no swaps needed
             else:
                 mid += 1
