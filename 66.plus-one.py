@@ -61,12 +61,7 @@ class Solution(object):
     def plusOne(self, digits):
         """
         :type digits: List[int]
-        :rtype: List[int]
-        """
-
-        i = len(digits)
-        carry = 0
-        while i >= 0:
+        :rtype: List[int
 
         
 # @lc code=end
